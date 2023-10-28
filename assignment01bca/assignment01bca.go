@@ -17,7 +17,7 @@ type Blockchain struct {
 	Blocks []*Block
 }
 
-func NewBlock(transaction string, nonce int, previousHash string) *Block {
+func (bc *Blockchain) NewBlock(transaction string, nonce int, previousHash string) *Block {
 	block := &Block{
 		Transaction:  transaction,
 		Nonce:        nonce,
